@@ -1,0 +1,396 @@
+:root {
+  --purple-black: #5528d3;
+  --purple-light: #7353ce;
+  --purple-white: #8a6ddd;
+  --marker-purple: #5565f680;
+  --green: #50fa7b;
+  --gray-dark: #141316;
+  --gray: #282a36;
+  --white-opacity: hsla(0, 0%, 100%, 0.5);
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 400;
+  background-color: var(--gray-dark);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  background-color: var(--gray);
+  float: left;
+}
+
+nav {
+  height: 80px;
+  background-color: var(--purple-light);
+  margin-left: 1rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilizção da nav, do botão e imagem*/
+
+nav a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+}
+
+#logo {
+  display: flex;
+}
+
+nav a img {
+  display: flex;
+  height: 60px;
+}
+
+nav div span {
+  height: 60px;
+  border-right: 2px solid var(--white-opacity);
+}
+
+/* abas Portfolio e projetos */
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul a {
+  padding: 28.5px;
+  margin: 0;
+}
+
+nav button {
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--purple-light);
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  border-style: none;
+  font-size: 1rem;
+  padding: 27.5px;
+}
+
+nav :is(.tab-portfolio, .tab-projetos) {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem 1.5rem;
+  width: 180px;
+  border-radius: 0 0 0.3rem 0.3rem;
+  position: absolute;
+  background-color: var(--purple-white);
+  top: 5rem;
+  z-index: 1;
+}
+
+:is(.tab-portfolio, .tab-projetos) a {
+  display: flex;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+}
+
+#drop {
+  text-align: left;
+}
+
+nav a:hover,
+#dropdown:hover #drop {
+  background-color: var(--purple-black);
+}
+
+#dropdown:hover :is(.tab-portfolio, .tab-projetos) {
+  display: block;
+}
+
+/*social icones*/
+
+.social {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--purple-light);
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.social a:hover i {
+  padding: 2.1rem 0.7rem 2rem;
+  color: var(--white);
+  background-color: var(--purple-black);
+}
+
+.home-content {
+  background-color: var(--gray);
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;*/
+  width: 100%;
+  height: 36rem;
+  z-index: -1;
+}
+
+.background-words {
+  font-family: "Permanent Marker", cursive;
+  color: var(--marker-purple);
+  margin-top: 1.5rem;
+  margin-left: 13rem;
+  font-size: 9.2rem;
+}
+
+.perfil-img img {
+  width: 35rem;
+  margin-left: 10rem;
+  margin-top: -1.8rem;
+}
+
+.home-content h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.4rem;
+  line-height: 3rem;
+}
+
+h2 span {
+  color: var(--green);
+}
+
+h2 {
+  margin-left: 3.5rem;
+  font-size: 1.5rem;
+  word-spacing: 0.4rem;
+  line-height: 3rem;
+}
+
+
+.text {
+  display: block;
+  position: absolute;
+  font-size: 1.1rem;
+  margin-top: 9.1rem;
+  margin-left: 13rem;
+  width: 32rem;
+  text-align: justify;
+  line-height: 2.2rem;
+}
+
+.sites {
+  margin-top: 2rem;
+  margin-bottom: 7.5rem;
+  display: flex;
+  align-content: space-between;
+  justify-items: flex-start;
+}
+
+.sites span {
+  display: block;
+  margin-right: 4.5rem;
+}
+
+.icon-down {
+  margin-left: 90%;
+  color: var(--green);
+}
+
+/*font-family: 'Permanent Marker', cursive;*/
+
+/*    2 e 3 ABAAAA*/
+
+#skills, #abilities {
+  padding: 2rem 0 0;
+  margin-left: 10rem;
+  margin-top: 8rem;
+  display: flex;
+  color: var(--green);
+  font-size: 3rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+.skills-content, .abilities-content {
+  margin-top: 2rem;
+  margin-left: 9%;
+  background-color: var(--gray);
+  border-radius: 2.5rem;
+  display: flex;
+  height: 28rem;
+  width: 82%;
+  z-index: -1;
+}
+
+.bar {
+  margin: 9rem 0rem 4rem;
+  border: solid 2px var(--green);
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-words-skills{
+  font-family: "Permanent Marker", cursive;
+  color: var(--marker-purple);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  font-size: 5rem;
+}
+
+.background-words-abilities {
+  font-family: "Permanent Marker", cursive;
+  color: var(--marker-purple);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  margin: 2.5rem 4rem 0rem 6.5rem;
+  font-size: 4rem;
+}
+
+div span i,
+div span img {
+  margin-right: 1rem;
+  width: 2.5rem;
+}
+
+.skills-text, .abilities-text {
+  margin-top: 0rem;
+  width: 82%;
+  height: 28rem;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.skills-items {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+}
+
+.skills-items span {
+  width: 11rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.abilities-items {
+  margin-top: 3rem;
+  margin-left: 6rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+}
+
+.abilities-items span {
+  width: 15rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.title-softwares {
+  margin-left: 6rem;
+}
+
+.skills-items-column {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+}
+
+.skills-items-column span {
+  width: 11rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.abilities-items-column {
+  width: 60%;
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+}
+
+.abilities-items-column span {
+  
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.skills-front, .skills-back {
+  margin-top: 4.5rem;
+  margin-left: 5rem;
+  width: 50%;
+}
+
+.abilities-front {
+  margin-top: 4.5rem;
+  margin-left: 2rem;
+  width: 60%;
+}
+
+.abilities-back {
+  margin-top: 4.5rem;
+  margin-left: 1rem;
+  width: 40%;
+}
+
+footer {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
